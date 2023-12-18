@@ -63,9 +63,17 @@ for (let i = 0; i <= data?.length - 1; i++) {
 
 // problem 4
 
-let totalAr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+let totalArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
+let a = []
+for(let i = 1; i<= totalArray.length-1;i+4){
+    for(let j = 0; j<= 5 ; j++){
+        a.push(totalArray[j])
+        console.log(a,"aaaa")
 
+    }
+    console.log(a,"aaaa")
+}
 
 
 
