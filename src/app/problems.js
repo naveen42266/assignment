@@ -24,6 +24,19 @@ let people = [
     { name: 'Bala', age: 25 },
     { name: 'Abdul', age: 27 },
 ]
+var convert = function(people) {
+    var output = {};
+    for(var i = 0; i < people.length; i++) {
+        if(output[people[i].age]) {
+            output[people[i].age].push(people[i].name);
+        } else {
+            output[people[i].age] = [people[i].name];
+        }
+    }
+    return output;
+}
+
+console.log(convert(people))
 let num = 0
 let data = people?.map((each) => each.age)
 

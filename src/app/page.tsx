@@ -32,7 +32,7 @@ const MainPage = () => {
             }
         }
     }
-    
+
     console.log(details, "details>>",count)
     return (
         <div className="h-screen w-screen p-4 relative overflow-y-scroll"ref={listInnerRef} onScroll={() => {
