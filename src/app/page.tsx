@@ -1,8 +1,8 @@
 'use client'
 import { TextField } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import SearchIcon from '@mui/icons-material/Search';
-import { cloneDeep } from "lodash";
 import { useRouter } from "next/navigation";
 import CloseIcon from '@mui/icons-material/Close';
 const MainPage = () => {
@@ -68,7 +68,14 @@ const MainPage = () => {
             {details == null || details == '' ? (
                 <div className="pt-40 md:pt-0">
                     <div className="flex justify-center">
-                        <img src="https://allvectorlogo.com/img/2021/12/github-logo-vector.png" alt="" />
+                        <Image
+                            src="https://allvectorlogo.com/img/2021/12/github-logo-vector.png"
+                            alt="Landscape picture"
+                            width={800}
+                            height={500}
+                        />
+                        {/* <Image src={"https://allvectorlogo.com/img/2021/12/github-logo-vector.png"} width={100} height={100} alt={""}></Image> */}
+                        {/* <Image src="https://allvectorlogo.com/img/2021/12/github-logo-vector.png" /> */}
                     </div>
                     <div className="flex justify-center">
                         <div className="text-base font-semibold">No Profile's found.Start Searching.......</div>
