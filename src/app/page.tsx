@@ -43,6 +43,13 @@ const MainPage = () => {
     }, [text])
 
 
+//     git init
+// git add README.md
+// git commit -m "first commit"
+// git branch -M main
+// git remote add origin https://github.com/naveen42266/Github_Profiles_Search.git
+// git push -u origin main
+
     return (
         <div className="h-screen w-screen px-4  overflow-y-scroll" ref={listInnerRef} onScroll={() => {
             onScroll()
