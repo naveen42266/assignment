@@ -1,7 +1,8 @@
 'use client'
 import { TextField } from "@mui/material";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SearchIcon from '@mui/icons-material/Search';
+import { cloneDeep } from "lodash";
 const MainPage = () => {
     const [text, setText] = useState('')
     const [count, setCount] = useState(1)
@@ -33,7 +34,20 @@ const MainPage = () => {
         }
     }
 
-    console.log(details, "details>>",count)
+    useEffect(() => {
+        if (text?.length == 0) {
+            setDetails(cloneDeep(null))
+        }
+    }, [text])
+
+
+//     git init
+// git add README.md
+// git commit -m "first commit"
+// git branch -M main
+// git remote add origin https://github.com/naveen42266/Github_Profiles_Search.git
+// git push -u origin main
+
     return (
         <div className="h-screen w-screen p-4 relative overflow-y-scroll"ref={listInnerRef} onScroll={() => {
             onScroll()
