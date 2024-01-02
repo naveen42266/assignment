@@ -5,13 +5,14 @@ import Image from "next/image";
 import SearchIcon from '@mui/icons-material/Search';
 import { useRouter } from "next/navigation";
 import CloseIcon from '@mui/icons-material/Close';
+import { cloneDeep } from "lodash";
 const MainPage = () => {
     const [text, setText] = useState('')
     const [count, setCount] = useState(1)
     const [details, setDetails] = useState<any>()
     const listInnerRef = useRef(null);
     const router = useRouter()
-    const cloneDeep = require('clone-deep');
+    // const cloneDeep = require('clone-deep');
     function seachText() {
         if (text != '')
             fetch("https://api.github.com/search/users?q=" + text + "&page=1").then(response => response.json())
@@ -78,7 +79,9 @@ const MainPage = () => {
                         {/* <Image src="https://allvectorlogo.com/img/2021/12/github-logo-vector.png" /> */}
                     </div>
                     <div className="flex justify-center">
-                        <div className="text-base font-semibold">No Profile's found.Start Searching.......</div>
+                        {/* <div className="text-base font-semibold">No Profile's found.Start Searching....... '</div>\ */}
+                        {/* <div className="text-base font-semibold">No Profile's found.Start Searching....... '</div> */}
+                        <div className="text-base font-semibold">{"No Profile's found. Start Searching......."}</div>
                     </div>
                 </div>
             ) : (
